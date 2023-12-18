@@ -1,0 +1,76 @@
+.google-font {
+    font-family: 'Lato', sans-serif !important;
+}
+
+body {
+    background-color: #587291;
+}
+
+
+#workout-section {
+    height: 400px;
+    color: white;
+}
+
+.box {
+    box-shadow: 0px 6px 25px 0px rgba(0,0,0,0.75);
+}
+
+.plus {
+    font-size: 3em;
+    line-height: .4;
+}
+
+#workout-list {
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: background-color 100ms linear;
+}
+
+#workout-list::-webkit-scrollbar {
+    display: none;
+}
+
+  #workout-list > li:hover {
+    background-color: rgb(109, 109, 109);
+    color: white;
+    transition: background-color 100ms linear;
+}
+
+#workout-box {
+    color: white;
+}
+
+.excersize-input {
+    width: 30%;
+}
+
+.custom-card {
+    width: 280px;
+    /* height: 200px; */
+}
+
+.delete-workout-btn {
+    background-color: white;
+    z-index: 10;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+
+.fa-icon-sized {
+    font-size: 2em;
+    color: white;
+}
+
+.fa-icon-sized:hover {
+    color: #587291;
+    transition: color 100ms linear;
+}
+
+.custom-icon {
+    font-size: 1.8rem;
+}
