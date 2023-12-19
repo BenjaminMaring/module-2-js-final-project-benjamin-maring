@@ -56,7 +56,7 @@ class Workout {
 
     //this method will be called when users click the 'edit' button on the modal
     _editExcersize(excersize) {
-        this._workout._excersizes[this._workout._excersizes.indexOf(excersize)] = Workout.newExcersize();
+        this._workout._excersizes[this._workout._excersizes.indexOf(excersize)] = Excersize.newExcersize();
         modal.hide();
         this._render();
     }
@@ -156,8 +156,9 @@ class Excersize {
     }
 
     static newExcersize() {
-        if (modal.notes.value="") {
-            modal.notes.value="No Notes"
+        console.log(modal.notes.value);
+        if (modal.notes.value === "") {
+            modal.notes.value = "No Notes";
         }
         let name = modal.excersize.value.split('')
         name[0] = name[0].toUpperCase();
@@ -166,8 +167,8 @@ class Excersize {
 
         return new Excersize((Math.random() * 1000), modal.excersize.value,
                                                      modal.sets.value, 
-                                                     modal.reps.value, 
                                                      modal.weight.value, 
+                                                     modal.reps.value, 
                                                      modal.notes.value);
     }
 }
