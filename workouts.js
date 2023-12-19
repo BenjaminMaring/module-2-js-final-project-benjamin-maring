@@ -142,7 +142,7 @@ class Workout {
 
     //just used to call storage export class
     _export() {
-        Storage.export(this._workout._id);
+        Storage.export(this._id);
     }
 }
 
