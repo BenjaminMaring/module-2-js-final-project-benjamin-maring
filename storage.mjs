@@ -16,7 +16,9 @@ export default class Storage {
     //Might refactor this later to use indexOf() and then change the index instead of deleting it and adding a new one. 
     //Doing it this was will always try and delete a workout, which is uneccesary when adding a brand new workout not yet in storage
     static saveWorkout(newWorkout, oldId) {
+        console.log("here")
         if (oldId !== "") {
+            console.log("in if")
             Storage.deleteWorkout(oldId);
         }
         const workouts = Storage.getWorkouts();

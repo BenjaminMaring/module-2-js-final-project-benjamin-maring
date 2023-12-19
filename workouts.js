@@ -31,7 +31,7 @@ class Workout {
         }
         const id = Math.random()*1000 + "";
         Storage.saveWorkout({_id: id, _name: name, _excersizes: this._workout._excersizes}, this._id);
-       
+        this._id = id;
         this._render();
     }
 
