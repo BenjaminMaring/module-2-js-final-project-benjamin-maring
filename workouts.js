@@ -29,9 +29,10 @@ class Workout {
             alert("Please Enter A Name");
             return;
         }
-        const id = Math.random()*1000 + ""
+        const id = Math.random()*1000 + "";
         Storage.saveWorkout({_id: id, _name: name, _excersizes: this._workout._excersizes}, this._id);
-        window.location = `workout.html?${id}`;
+       
+        this._render();
     }
 
     //deletes the current workout opened then navigates back to the main page
@@ -105,7 +106,7 @@ class Workout {
                         <p class="fs-4">lb</p>
                     </div>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white" style="flex: end">
                     <p id="notes-title" class="fs-5 m-0">${this._workout._excersizes[excer].notes}</p>
                     </div>
                 </div>`;
