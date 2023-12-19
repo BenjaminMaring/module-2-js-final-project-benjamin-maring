@@ -6,7 +6,6 @@ body {
     background-color: #587291;
 }
 
-
 #workout-section {
     height: 400px;
     color: white;
@@ -59,7 +58,6 @@ body {
 input[type="file"] {
     display: none;
 }
-
 
 .fa-icon-sized {
     font-size: 2em;

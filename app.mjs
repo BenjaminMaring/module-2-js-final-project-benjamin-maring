@@ -8,9 +8,7 @@ class UI {
         document.getElementById('new-workout-btn').addEventListener('click', () => {
             this.navigateWorkout('new');
         })
-        try {
-            this._setUpImport();
-        } catch(error) {}
+        this._setUpImport();      
     }
 
     //will be used to load everything that needs to be when first navigating
@@ -39,10 +37,10 @@ class UI {
             
             li.innerHTML = `
             <div class="d-flex align-items-center justify-content-between">
-            ${this._workouts[workout]._name}
-            <div>
-                ${this._workouts[workout]._excersizes.length} Excersizes
-            </div>  
+                ${this._workouts[workout]._name}
+                <div>
+                    ${this._workouts[workout]._excersizes.length} Excersizes
+                </div>  
             </div>`
             workoutList.appendChild(li);
         }

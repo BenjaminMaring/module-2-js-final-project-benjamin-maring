@@ -83,7 +83,6 @@ export default class Storage {
         } catch(error) {
             alert("An Error occured");
             console.log("error occured - " + error);
-            // window.location = "index.html";
         }
     }// end import
 
