@@ -16,9 +16,7 @@ export default class Storage {
     //Might refactor this later to use indexOf() and then change the index instead of deleting it and adding a new one. 
     //Doing it this was will always try and delete a workout, which is uneccesary when adding a brand new workout not yet in storage
     static saveWorkout(newWorkout, oldId) {
-        console.log("here")
         if (oldId !== "") {
-            console.log("in if")
             Storage.deleteWorkout(oldId);
         }
         const workouts = Storage.getWorkouts();
@@ -55,7 +53,7 @@ export default class Storage {
 
     //This method checks to see if local storage has anything saved, if not it creates an empty array and then returns that. 
     //Otherwise, it returns the workouts array
-    static getWorkouts(){
+    static getWorkouts() {
         if (localStorage.getItem('workouts') === null) {
             return [];
         } else {
@@ -104,7 +102,6 @@ export default class Storage {
         if (workout === undefined) {
             alert("Export error, please try saving the file and exporting again");
         }
-        console.log(workout)
         let jsonContent = JSON.stringify(workout);
         const blob = new Blob([jsonContent], { type: 'json' });
         const link = document.createElement('a');
